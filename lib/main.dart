@@ -1,7 +1,11 @@
 import 'package:flutter/widgets.dart';
-import 'package:project_hack_forgood/animation/register.dart';
-import 'package:project_hack_forgood/animation_demo.dart';
+import 'animation/home.dart';
 
 void main() {
-  runApp(new AnimationDemo());
+  runApp(new App());
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => new AnimationDemoHome();
 }
