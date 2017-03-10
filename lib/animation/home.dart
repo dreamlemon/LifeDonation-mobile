@@ -361,8 +361,6 @@ class _AllSectionsView extends AnimatedWidget {
 class AnimationDemoHome extends StatefulWidget {
   AnimationDemoHome({ Key key }) : super(key: key);
 
-  static const String routeName = '/animation';
-
   @override
   _AnimationDemoHomeState createState() => new _AnimationDemoHomeState();
 }
@@ -496,22 +494,22 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome> {
               ),
               // Details
               new SliverToBoxAdapter(
-                child: new SizedBox(
-                  height: 610.0,
-                  child: new NotificationListener<ScrollNotification>(
-                    onNotification: (ScrollNotification notification) {
-                      return _handlePageNotification(notification, _detailsPageController, _headingPageController);
-                    },
-                    child: new PageView(
-                      controller: _detailsPageController,
-                      children: allSections.map((Section section) {
-                        return new CustomScrollView(
-                          slivers: _detailItemsFor(section).toList(),
-                        );
-                      }).toList(),
-                    ),
+                  child: new SizedBox(
+                      height: 610.0,
+                      child: new NotificationListener<ScrollNotification>(
+                          onNotification: (ScrollNotification notification) {
+                            return _handlePageNotification(notification, _detailsPageController, _headingPageController);
+                          },
+                          child: new PageView(
+                              controller: _detailsPageController,
+                              children: allSections.map((Section section) {
+                                return new CustomScrollView(
+                                    slivers: _detailItemsFor(section).toList(),
+                                );
+                              }).toList(),
+                          ),
+                      ),
                   ),
-                ),
               ),
             ],
           )
