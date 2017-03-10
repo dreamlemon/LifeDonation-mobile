@@ -1,10 +1,3 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// Based on https://material.uplabs.com/posts/google-newsstand-navigation-pattern
-// See also: https://material-motion.github.io/material-motion/documentation/
-
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
@@ -26,9 +19,6 @@ const double _kAppBarMinHeight = 90.0;
 const double _kAppBarMidHeight = 256.0;
 // The AppBar's max height depends on the screen, see _AnimationDemoHomeState._buildBody()
 
-// Initially occupies the same space as the status bar and gets smaller as
-// the primary scrollable scrolls upwards.
-// TODO(hansmuller): it would be worth adding something like this to the framework.
 class _RenderStatusBarPaddingSliver extends RenderSliver {
   _RenderStatusBarPaddingSliver({
     double maxHeight,
@@ -366,12 +356,10 @@ class _AllSectionsView extends AnimatedWidget {
 }
 
 class AnimationDemoHome extends StatefulWidget {
-  AnimationDemoHome({ Key key }) : super(key: key);
-
-  static const String routeName = '/animation';
 
   @override
   _AnimationDemoHomeState createState() => new _AnimationDemoHomeState();
+
 }
 
 class _AnimationDemoHomeState extends State<AnimationDemoHome> {
@@ -385,7 +373,6 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome> {
     return new Scaffold(
       backgroundColor: _kAppBackgroundColor,
       body: new Builder(
-        // Insert an element so that _buildBody can find the PrimaryScrollController.
         builder: (BuildContext context) => _buildBody(context),
       ),
     );
@@ -521,15 +508,7 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome> {
                 ),
               ),
             ],
-          ),
-          new Positioned(
-            top: statusBarHeight,
-            left: 0.0,
-            child: new IconTheme(
-              data: const IconThemeData(color: Colors.white),
-              child: const BackButton(),
-            ),
-          ),
+          )
         ],
       ),
     );
