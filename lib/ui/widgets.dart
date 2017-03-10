@@ -112,43 +112,15 @@ class SectionIndicator extends StatelessWidget {
 // Display a single SectionDetail.
 class SectionDetailView extends StatelessWidget {
   SectionDetailView({ Key key, this.detail }) : super(key: key) {
-    assert(detail != null && detail.imageAsset != null);
-    assert((detail.imageAsset ?? detail.title) != null);
+    // assert(detail != null && detail.imageAsset != null);
+    // assert((detail.imageAsset ?? detail.title) != null);
   }
 
   final SectionDetail detail;
 
   @override
   Widget build(BuildContext context) {
-    final Widget image = new DecoratedBox(
-      decoration: new BoxDecoration(
-        borderRadius: new BorderRadius.circular(6.0),
-        backgroundImage: new BackgroundImage(
-          image: new AssetImage(detail.imageAsset),
-          fit: ImageFit.cover,
-          alignment: FractionalOffset.center,
-        ),
-      ),
-    );
-
-    Widget item;
-    if (detail.title == null && detail.subtitle == null) {
-      item = new Container(
-        height: 240.0,
-        padding: const EdgeInsets.all(16.0),
-        child: image,
-      );
-    } else {
-      item = new ListItem(
-        title: new Text(detail.title),
-        subtitle: new Text(detail.subtitle),
-        leading: new SizedBox(width: 32.0, height: 32.0, child: image),
-      );
-    }
-
-    return new DecoratedBox(
-      decoration: new BoxDecoration(backgroundColor: Colors.grey[200]),
-      child: item,
-    );
+    return detail.body;
   }
+
 }

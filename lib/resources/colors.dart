@@ -9,4 +9,5 @@ class CColors {
   static const Color darkRed = const Color(0xFF5C1D37);
   static const Color yellow = const Color(0xFFFE5E41);
 
+  static const Color boxDecoration = const Color(0xFFF7F7F7);
 }

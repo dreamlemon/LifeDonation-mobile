@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'animation/home.dart';
+import 'ui/home.dart';
 
 void main() {
   runApp(new App());

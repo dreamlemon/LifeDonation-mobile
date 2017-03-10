@@ -377,8 +377,8 @@ class _AnimationDemoHomeState extends State<AnimationDemoHome> {
       backgroundColor: _kAppBackgroundColor,
       body: new Builder(
         // Insert an element so that _buildBody can find the PrimaryScrollController.
-        builder: (BuildContext context) => _buildBody(context),
-      ),
+        builder: (BuildContext context) => _buildBody(context)
+      )
     );
   }
 
