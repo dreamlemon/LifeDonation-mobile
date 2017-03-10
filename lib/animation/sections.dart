@@ -84,7 +84,7 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'ACERCA DE',
-    leftColor: CColors.tomato,
+    leftColor: CColors.pink,
     rightColor: CColors.lightblue,
     backgroundAsset: 'assets/infoImage.jpeg',
     details: const <SectionDetail>[
@@ -93,8 +93,8 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'DONAR AHORA',
-    leftColor: CColors.mySin,
-    rightColor: CColors.tomato,
+    leftColor: CColors.lightblue,
+    rightColor: CColors.darkRed,
     backgroundAsset: 'assets/donateImage.jpeg',
     details: const <SectionDetail>[
 
@@ -102,8 +102,8 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'PERFIL',
-    leftColor: Colors.white,
-    rightColor: CColors.tomato,
+    leftColor: CColors.darkRed,
+    rightColor: CColors.lightblue,
     backgroundAsset: 'assets/profileImage.jpg',
     details: const <SectionDetail>[
 

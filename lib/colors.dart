@@ -2,10 +2,11 @@ import 'package:flutter/widgets.dart';
 
 class CColors {
 
+  // Header colors
   static const Color lightblue = const Color(0xFFA2BCE0);
   static const Color blue = const Color(0xFF0B5563);
-  static const Color tomato = const Color(0xFFF95B57);
-  static const Color mySin = const Color(0xFFF3A646);
-  static const Color deepCerise = const Color(0xFFD93F9B);
+  static const Color pink = const Color(0xFFE25186);
+  static const Color darkRed = const Color(0xFF5C1D37);
+  static const Color yellow = const Color(0xFFFE5E41);
 
 }
