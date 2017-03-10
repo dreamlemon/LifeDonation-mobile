@@ -356,8 +356,10 @@ class _AllSectionsView extends AnimatedWidget {
 }
 
 class AnimationDemoHome extends StatefulWidget {
+
   @override
   _AnimationDemoHomeState createState() => new _AnimationDemoHomeState();
+
 }
 
 class _AnimationDemoHomeState extends State<AnimationDemoHome> {
