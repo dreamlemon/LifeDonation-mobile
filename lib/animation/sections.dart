@@ -88,7 +88,7 @@ final List<Section> allSections = <Section>[
     title: 'HOME',
     leftColor: _mediumPurple,
     rightColor: _mariner,
-    backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/sunnies.png',
+    backgroundAsset: 'assets/homeImage.jpeg',
     details: const <SectionDetail>[
       _eyeglassesDetail,
       _eyeglassesImageDetail,
@@ -102,7 +102,7 @@ final List<Section> allSections = <Section>[
     title: 'ACERCA DE',
     leftColor: _tomato,
     rightColor: _mediumPurple,
-    backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/lawn_chair.png',
+    backgroundAsset: 'assets/infoImage.jpeg',
     details: const <SectionDetail>[
       _seatingDetail,
       _seatingImageDetail,
@@ -113,10 +113,10 @@ final List<Section> allSections = <Section>[
     ],
   ),
   const Section(
-    title: 'MAPA',
+    title: 'DONAR AHORA',
     leftColor: _mySin,
     rightColor: _tomato,
-    backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/lipstick.png',
+    backgroundAsset: 'assets/donateImage.jpeg',
     details: const <SectionDetail>[
       _decorationDetail,
       _decorationImageDetail,
@@ -130,7 +130,7 @@ final List<Section> allSections = <Section>[
     title: 'PERFIL',
     leftColor: Colors.white,
     rightColor: _tomato,
-    backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/helmet.png',
+    backgroundAsset: 'assets/profileImage.jpg',
     details: const <SectionDetail>[
       _protectionDetail,
       _protectionImageDetail,
