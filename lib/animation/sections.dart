@@ -85,7 +85,7 @@ const SectionDetail _protectionImageDetail = const SectionDetail(
 
 final List<Section> allSections = <Section>[
   const Section(
-    title: 'EYEGLASSES',
+    title: 'HOME',
     leftColor: _mediumPurple,
     rightColor: _mariner,
     backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/sunnies.png',
@@ -99,7 +99,7 @@ final List<Section> allSections = <Section>[
     ],
   ),
   const Section(
-    title: 'SEATING',
+    title: 'ACERCA DE',
     leftColor: _tomato,
     rightColor: _mediumPurple,
     backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/lawn_chair.png',
@@ -113,7 +113,7 @@ final List<Section> allSections = <Section>[
     ],
   ),
   const Section(
-    title: 'DECORATION',
+    title: 'MAPA',
     leftColor: _mySin,
     rightColor: _tomato,
     backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/lipstick.png',
@@ -127,7 +127,7 @@ final List<Section> allSections = <Section>[
     ],
   ),
   const Section(
-    title: 'PROTECTION',
+    title: 'PERFIL',
     leftColor: Colors.white,
     rightColor: _tomato,
     backgroundAsset: 'packages/flutter_gallery_assets/shrine/products/helmet.png',
