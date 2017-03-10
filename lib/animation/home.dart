@@ -366,12 +366,10 @@ class _AllSectionsView extends AnimatedWidget {
 }
 
 class AnimationDemoHome extends StatefulWidget {
-  AnimationDemoHome({ Key key }) : super(key: key);
-
-  static const String routeName = '/animation';
 
   @override
   _AnimationDemoHomeState createState() => new _AnimationDemoHomeState();
+
 }
 
 class _AnimationDemoHomeState extends State<AnimationDemoHome> {
