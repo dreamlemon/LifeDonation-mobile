@@ -29,7 +29,7 @@ class SectionCard extends StatelessWidget {
           ),
         ),
         child: new Opacity(
-          opacity: 0.075,
+          opacity: 0.35,
           child: new Image.asset(
             section.backgroundAsset,
             fit: ImageFit.cover,

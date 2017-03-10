@@ -75,8 +75,8 @@ final SectionDetail _homeScreen = new SectionDetail(
 final List<Section> allSections = <Section>[
   const Section(
     title: 'HOME',
-    leftColor: _mediumPurple,
-    rightColor: _mariner,
+    leftColor: CColors.lightblue,
+    rightColor: CColors.blue,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: const <SectionDetail>[
 
@@ -84,8 +84,8 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'ACERCA DE',
-    leftColor: _tomato,
-    rightColor: _mediumPurple,
+    leftColor: CColors.tomato,
+    rightColor: CColors.lightblue,
     backgroundAsset: 'assets/infoImage.jpeg',
     details: const <SectionDetail>[
 
@@ -93,8 +93,8 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'DONAR AHORA',
-    leftColor: _mySin,
-    rightColor: _tomato,
+    leftColor: CColors.mySin,
+    rightColor: CColors.tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
     details: const <SectionDetail>[
 
@@ -103,7 +103,7 @@ final List<Section> allSections = <Section>[
   const Section(
     title: 'PERFIL',
     leftColor: Colors.white,
-    rightColor: _tomato,
+    rightColor: CColors.tomato,
     backgroundAsset: 'assets/profileImage.jpg',
     details: const <SectionDetail>[
 
