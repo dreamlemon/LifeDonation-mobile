@@ -1,22 +1,9 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// Raw data for the animation demo.
-
 import 'package:flutter/material.dart';
-
-const Color _mariner = const Color(0xFF3B5F8F);
-const Color _mediumPurple = const Color(0xFF8266D4);
-const Color _tomato = const Color(0xFFF95B57);
-const Color _mySin = const Color(0xFFF3A646);
-const Color _deepCerise = const Color(0xFFD93F9B);
+import 'package:project_hack_forgood/colors.dart';
 
 class SectionDetail {
-  const SectionDetail({ this.title, this.subtitle, this.imageAsset });
-  final String title;
-  final String subtitle;
-  final String imageAsset;
+  SectionDetail({ this.body });
+  final Widget body;
 }
 
 class Section {
@@ -39,10 +26,7 @@ class Section {
   int get hashCode => title.hashCode;
 }
 
-// TODO(hansmuller): replace the SectionDetail images and text. Get rid of
-// the const vars like _eyeglassesDetail and insert a variety of titles and
-// image SectionDetails in the allSections list.
-
+/*
 const SectionDetail _eyeglassesDetail = const SectionDetail(
   imageAsset: 'packages/flutter_gallery_assets/shrine/products/sunnies.png',
   title: 'Flutter enables interactive animation',
@@ -82,6 +66,11 @@ const SectionDetail _protectionDetail = const SectionDetail(
 const SectionDetail _protectionImageDetail = const SectionDetail(
   imageAsset: 'packages/flutter_gallery_assets/shrine/products/helmet.png',
 );
+*/
+
+final SectionDetail _homeScreen = new SectionDetail(
+  body: new Text("Hola")
+);
 
 final List<Section> allSections = <Section>[
   const Section(
@@ -90,12 +79,7 @@ final List<Section> allSections = <Section>[
     rightColor: _mariner,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: const <SectionDetail>[
-      _eyeglassesDetail,
-      _eyeglassesImageDetail,
-      _eyeglassesDetail,
-      _eyeglassesDetail,
-      _eyeglassesDetail,
-      _eyeglassesDetail,
+
     ],
   ),
   const Section(
@@ -104,12 +88,7 @@ final List<Section> allSections = <Section>[
     rightColor: _mediumPurple,
     backgroundAsset: 'assets/infoImage.jpeg',
     details: const <SectionDetail>[
-      _seatingDetail,
-      _seatingImageDetail,
-      _seatingDetail,
-      _seatingDetail,
-      _seatingDetail,
-      _seatingDetail,
+
     ],
   ),
   const Section(
@@ -118,12 +97,7 @@ final List<Section> allSections = <Section>[
     rightColor: _tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
     details: const <SectionDetail>[
-      _decorationDetail,
-      _decorationImageDetail,
-      _decorationDetail,
-      _decorationDetail,
-      _decorationDetail,
-      _decorationDetail,
+
     ],
   ),
   const Section(
@@ -132,12 +106,7 @@ final List<Section> allSections = <Section>[
     rightColor: _tomato,
     backgroundAsset: 'assets/profileImage.jpg',
     details: const <SectionDetail>[
-      _protectionDetail,
-      _protectionImageDetail,
-      _protectionDetail,
-      _protectionDetail,
-      _protectionDetail,
-      _protectionDetail,
+
     ],
   ),
 ];
