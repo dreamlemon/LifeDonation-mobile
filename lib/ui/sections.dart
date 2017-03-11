@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_hack_forgood/resources/colors.dart';
+import 'package:project_hack_forgood/ui/faq.dart';
 
 class SectionDetail {
   SectionDetail({ this.body });
@@ -33,29 +34,63 @@ final SectionDetail _graficas = new SectionDetail(
   )
 );
 
+
+final SectionDetail info = new SectionDetail(
+    body: new SingleChildScrollView(
+        child: new Container(
+            margin: const EdgeInsets.all(24.0),
+            child: new ExpansionPanelList(
+                expansionCallback: (int index, bool isExpanded) {
+
+                },
+                children: <ExpansionPanel> [
+                  new ExpansionPanel(
+                      headerBuilder: (BuildContext context, bool isExpanded) {
+                        return new Text("¿Por qué debemos donar sangre?");
+                      },
+                      body: new Column(
+                          children: <Widget>[
+                      new Container(
+                      margin: const EdgeInsets.only(
+                          left: 24.0,
+                          right: 24.0,
+                          bottom: 24.0
+                      ),
+            child: new Center(
+                child: new Text("Hola")
+            )
+        )])
+                  )]
+            )
+        )
+    )
+);
+
+
 final List<Section> allSections = <Section>[
   new Section(
     title: 'HOME',
-    leftColor: CColors.lightblue,
-    rightColor: CColors.blue,
+      leftColor: CColors.mediumPurple,
+      rightColor: CColors.mariner,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: <SectionDetail>[
       _graficas
     ]
   ),
-  const Section(
+  new Section(
     title: 'ACERCA DE',
-    leftColor: CColors.pink,
-    rightColor: CColors.lightblue,
+      leftColor: CColors.tomato,
+      rightColor: CColors.mediumPurple,
     backgroundAsset: 'assets/infoImage.jpeg',
-    details: const <SectionDetail>[
+    details:  <SectionDetail>[
+      info
 
     ]
   ),
   const Section(
     title: 'DONAR AHORA',
-    leftColor: CColors.lightblue,
-    rightColor: CColors.darkRed,
+      leftColor: CColors.mySin,
+      rightColor: CColors.tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
     details: const <SectionDetail>[
 
@@ -63,8 +98,8 @@ final List<Section> allSections = <Section>[
   ),
   const Section(
     title: 'PERFIL',
-    leftColor: CColors.darkRed,
-    rightColor: CColors.lightblue,
+    leftColor: Colors.white,
+    rightColor: CColors.tomato,
     backgroundAsset: 'assets/profileImage.jpg',
     details: const <SectionDetail>[
 
