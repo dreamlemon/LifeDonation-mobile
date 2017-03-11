@@ -10,7 +10,6 @@ class CColors {
   static const Color deepCerise = const Color(0xFFD93F9B);
 
   static const Color boxDecoration = const Color(0xFFF7F7F7);
-
 }
 
 class CAssets {
@@ -20,6 +19,6 @@ class CAssets {
 
 class CTexts {
 
-  
+
 
 }

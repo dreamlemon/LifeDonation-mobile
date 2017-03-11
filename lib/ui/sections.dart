@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:project_hack_forgood/resources/resources.dart';
-import 'package:project_hack_forgood/ui/faq.dart';
 import 'package:project_hack_forgood/ui/widgets.dart';
 
 // MODELS
@@ -50,7 +49,7 @@ final SectionDetail _home = new SectionDetail(
              child: new Row(
                 children: <Widget>[
                   new Container(
-                    child:new Text("PORCENTAJE DE DONACIONES REALIZADAS",
+                    child: new Text("PORCENTAJE DE DONACIONES REALIZADAS",
                       style: new TextStyle(color: Colors.white, fontSize: 15.0),
                       textAlign: TextAlign.center
                     ),
@@ -154,7 +153,7 @@ final SectionDetail _profile = new SectionDetail(
   )
 );
 
-String typeOfBlood(String tipoSangre){
+String typeOfBlood(String tipoSangre) {
   String texto = "";
   switch (tipoSangre){
     case ("AB+"):
@@ -184,9 +183,7 @@ String typeOfBlood(String tipoSangre){
   }
   return texto;
 
-
 }
-
 
 
 final List<Section> allSections = <Section>[
@@ -209,7 +206,7 @@ final List<Section> allSections = <Section>[
     ]
   ),
   new Section(
-    title: 'DONAR AHORA',
+    title: 'ALERTAS',
       leftColor: CColors.mySin,
       rightColor: CColors.tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
