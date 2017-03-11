@@ -3,7 +3,7 @@ import 'package:project_hack_forgood/ui/register.dart';
 import 'ui/home.dart';
 
 void main() {
-  runApp(new RegisterView());
+  runApp(new App());
 }
 
 class App extends StatelessWidget {

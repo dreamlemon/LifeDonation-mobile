@@ -63,10 +63,10 @@ final SectionDetail _home = new SectionDetail(
               backgroundColor: Colors.white12,),
             child: new Row(
               children: <Widget>[
-                new BloodView(image: 'assets/abM.png', porcent: '60%'),
-                new BloodView(image: 'assets/abN.png', porcent: '60%'),
-                new BloodView(image: 'assets/aM.png', porcent: '60%'),
-                new BloodView(image: 'assets/ON.png', porcent: '60%')
+                new BloodView(image: 'assets/abM.png', porcent: '3%'),
+                new BloodView(image: 'assets/abN.png', porcent: '1%'),
+                new BloodView(image: 'assets/aM.png', porcent: '37%'),
+                new BloodView(image: 'assets/ON.png', porcent: '6%')
               ],
               mainAxisAlignment: MainAxisAlignment.spaceAround
             )),
@@ -75,18 +75,20 @@ final SectionDetail _home = new SectionDetail(
               backgroundColor: Colors.white12,),
             child: new Row(
                 children: <Widget>[
-                  new BloodView(image: 'assets/aN.png', porcent: '60%'),
-                  new BloodView(image: 'assets/bM.png', porcent: '60%'),
-                  new BloodView(image: 'assets/bN.png', porcent: '60%'),
-                  new BloodView(image: 'assets/OM.png', porcent: '60%')
+                  new BloodView(image: 'assets/aN.png', porcent: '7%'),
+                  new BloodView(image: 'assets/bM.png', porcent: '9%'),
+                  new BloodView(image: 'assets/bN.png', porcent: '1%'),
+                  new BloodView(image: 'assets/OM.png', porcent: '36%')
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround
             )),
-        new Divider(color: Colors.transparent, height: 10.0),
+        new Divider(color: Colors.transparent, height: 15.0),
         new DecoratedBox(
             decoration: new BoxDecoration(
                 backgroundColor: Colors.white12,),
-            child: new Row(
+
+            child: new Container(
+                child:new Row(
                 children: <Widget>[
                   new Text('DONAR AHORA',
                       style: new TextStyle(color: Colors.white, fontSize: 15.0),
@@ -94,19 +96,24 @@ final SectionDetail _home = new SectionDetail(
                   )
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround
+            ),
+                margin: new EdgeInsets.all(10.0)
             )),
         new Divider(color: Colors.transparent, height: 5.0),
         new DecoratedBox(
             decoration: new BoxDecoration(
                 backgroundColor: Colors.white12,),
-            child: new Row(
+            child: new Container(
+              child:new Row(
                 children: <Widget>[
-                  new Text('',
+                  new Text(CTexts.locationInfo,
                       style: new TextStyle(color: Colors.white, fontSize: 15.0),
-                      textAlign: TextAlign.center
+                      textAlign: TextAlign.left
                   )
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround
+            ),
+                margin: new EdgeInsets.all(10.0)
             )),
           ])
 );
@@ -188,6 +195,49 @@ final SectionDetail _profile = new SectionDetail(
   )
 );
 
+
+final SectionDetail _alerts = new SectionDetail(
+    body: new DecoratedBox(
+        decoration: new BoxDecoration(
+            backgroundColor: Colors.white12,),
+        child: new Container(
+            child:new Column(
+            children: <Widget>[new Row(
+            children: <Widget>[new Text("El hospital ",
+                style: new TextStyle(color: Colors.white, fontSize: 17.0)
+            ),
+            new Text("Nuestra Señora De La Montaña ",
+                style: new TextStyle(color: CColors.deepCerise, fontSize: 17.0)
+            ),
+            ]
+          ), new Row(
+              children: <Widget>[new Text(" en ",
+                  style: new TextStyle(color: Colors.white, fontSize: 17.0)
+              ),new Text("Avda. de España Nº2",
+                  style: new TextStyle(color: CColors.deepCerise, fontSize: 17.0)
+              ),new Text(" necesita una  ",
+                  style: new TextStyle(color: Colors.white, fontSize: 17.0)
+              )
+
+                ]
+            ),new Row(
+                children: <Widget>[new Text("donación de ",
+                    style: new TextStyle(color: Colors.white, fontSize: 17.0)
+                ),new Text(tipoSangre,
+                    style: new TextStyle(color: CColors.deepCerise, fontSize: 17.0)
+                ),new Text(" del cual eres donante.",
+                    style: new TextStyle(color: Colors.white, fontSize: 17.0)
+                )
+
+                ]
+            ),
+            ]),
+          margin: new EdgeInsets.all(15.0)
+        )
+    )
+);
+
+
 String typeOfBlood(String tipoSangre) {
   String texto = "";
   switch (tipoSangre){
@@ -246,7 +296,7 @@ final List<Section> allSections = <Section>[
       rightColor: CColors.tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
     details: <SectionDetail>[
-
+      _alerts
     ]
   ),
   new Section(

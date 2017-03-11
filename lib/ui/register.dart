@@ -32,7 +32,7 @@ class _RegisterViewState extends State<RegisterView> {
               )
             ],
             onStepContinue: () {
-              
+
             }
           ),
           margin: new EdgeInsets.all(15.0)

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'sections.dart';
 
+
+
 const double kSectionIndicatorWidth = 32.0;
 
 // The card for a single section. Displays the section's gradient and background image.
@@ -209,4 +211,23 @@ class BloodView extends StatelessWidget {
     );
   }
 
+}
+
+class StockList extends StatelessWidget {
+  StockList({ Key key, this.onOpen, this.onShow, this.onAction }) : super(key: key);
+
+  final String onOpen;
+  final String onShow;
+  final String onAction;
+
+  @override
+  Widget build(BuildContext context) {
+    return new ListView.builder(
+        key: const ValueKey<String>('stock-list'),
+
+        itemBuilder: (BuildContext context, int index) {
+
+        },
+    );
+  }
 }
