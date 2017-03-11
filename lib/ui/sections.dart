@@ -100,7 +100,7 @@ final List<Section> allSections = <Section>[
     title: 'PERFIL',
     leftColor: Colors.white,
     rightColor: CColors.tomato,
-    backgroundAsset: 'assets/profileImage.jpg',
+    backgroundAsset: 'assets/profileImage.jpeg',
     details: const <SectionDetail>[
 
     ]
