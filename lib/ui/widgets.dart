@@ -160,7 +160,7 @@ class ExpansionPanelViewState extends State<ExpansionPanelView> {
               isExpanded: item.isExpanded,
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return new Container(
-                  child:new Text(item.title,
+                  child: new Text(item.title,
                     style: new TextStyle(color: Colors.black,
                         fontSize: 19.0),
                     textAlign: TextAlign.center
