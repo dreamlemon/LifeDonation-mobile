@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'package:project_hack_forgood/resources/colors.dart';
 import 'package:project_hack_forgood/ui/faq.dart';
 import 'package:project_hack_forgood/ui/widgets.dart';
@@ -30,7 +32,7 @@ class Section {
 
 class ExpansionItemDetail {
 
-  ExpansionItem(this.title, this.description);
+  ExpansionItemDetail({ this.title, this.description });
 
   final String title;
   final String description;
@@ -40,85 +42,34 @@ class ExpansionItemDetail {
 
 // DATA
 final SectionDetail _home = new SectionDetail(
-      body:
-      new Column(
+      body: new Column(
           children: <Widget>[
             new Row(
               children: <Widget>[
-                new Container(
-                  child: new Column(
-                    children: <Widget>[
-                      new Image.asset(
-                          'assets/abM.png',
-                          width: 50.0
-                      ),
-                      new Container(
-                        child: new Text('60%',
-                            style: new TextStyle(color: Colors.white, fontSize: 17.0)
-                        ),
-                        margin:  new EdgeInsets.all(10.0)
-                      )
-                      ],
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween
-                  ),
-                  margin: new EdgeInsets.all(20.0),
-                ),
-                new Container(
-                    child: new Image.asset(
-                        'assets/abM.png',
-                        width: 60.0
-                    ),
-                    margin: new EdgeInsets.all(20.0),
-                ),
-                new Container(
-                    child: new Image.asset(
-                        'assets/abM.png',
-                        width: 60.0
-                    ),
-                    margin: new EdgeInsets.all(20.0),
-                ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceAround
+                new BloodView(image: 'assets/abM.png', porcent: '60%'),
+                new BloodView(image: 'assets/abM.png', porcent: '60%'),
+                new BloodView(image: 'assets/abM.png', porcent: '60%')
+              ],
+              mainAxisAlignment: MainAxisAlignment.spaceAround
             ),
             new Row(
                 children: <Widget>[
-                  new Container(
-                      child: new Image.asset(
-                          'assets/abM.png',
-                          width: 60.0
-                      ),
-                      margin: new EdgeInsets.all(20.0),
-                  ),
-                  new Container(
-                      child: new Image.asset(
-                          'assets/abM.png',
-                          width: 60.0
-                      ),
-                      margin: new EdgeInsets.all(20.0),
-                  ),
-                  new Container(
-                      child: new Image.asset(
-                          'assets/abM.png',
-                          width: 60.0
-                      ),
-                      margin: new EdgeInsets.all(20.0),
-                  ),
+                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
+                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
+                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround
-            ),
-
-  ])
+            )
+          ])
 );
 
-List<ExpansionItemDetail> itemsData = <ExpansionItemDetail>[
-  new ExpansionItem("title", "description")
+List<ExpansionItemDetail> itemsData = [
+  new ExpansionItemDetail(title: "title", description: "description")
 ];
 
 final SectionDetail info = new SectionDetail(
     body: new ExpansionPanelView(items: itemsData)
 );
-
-
 
 final SectionDetail _profile = new SectionDetail(
   body: new Container(
@@ -167,7 +118,7 @@ final List<Section> allSections = <Section>[
       rightColor: CColors.mariner,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: <SectionDetail>[
-
+      _home
     ]
   ),
   new Section(

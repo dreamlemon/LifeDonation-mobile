@@ -130,7 +130,6 @@ class SectionDetailView extends StatelessWidget {
 }
 
 class ExpansionPanelView extends StatefulWidget {
-
   ExpansionPanelView({ this.items });
 
   List<ExpansionItemDetail> items;
@@ -154,7 +153,7 @@ class ExpansionPanelViewState extends State<ExpansionPanelView> {
             itemsc[index].isExpanded = !isExpanded;
           });
         },
-        children: itemsc.map((ExpansionItem item) {
+        children: itemsc.map((item) {
           return new ExpansionPanel(
               isExpanded: item.isExpanded,
               headerBuilder: (BuildContext context, bool isExpanded) {
@@ -162,6 +161,38 @@ class ExpansionPanelViewState extends State<ExpansionPanelView> {
               },
               body: new Text(item.description));
         }).toList()
+    );
+  }
+
+}
+
+// Blood view.
+class BloodView extends StatelessWidget {
+
+  BloodView({ this.image, this.porcent });
+
+  String image;
+  String porcent;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+        child: new Column(
+            children: <Widget>[
+              new Image.asset(
+                  image,
+                  width: 50.0
+              ),
+              new Container(
+                  child: new Text(porcent,
+                      style: new TextStyle(color: Colors.white, fontSize: 17.0)
+                  ),
+                  margin: new EdgeInsets.all(10.0)
+              )
+            ],
+            mainAxisAlignment: MainAxisAlignment.spaceBetween
+        ),
+        margin: new EdgeInsets.all(20.0),
     );
   }
 
