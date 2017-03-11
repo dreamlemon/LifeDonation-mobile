@@ -7,7 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'sections.dart';
 import 'widgets.dart';
 
-const Color _kAppBackgroundColor = const Color(0xFF353662);
+const Color _kAppBackgroundColor = const Color(0xFF373C41);
 
 // This app's contents start out at _kHeadingMaxHeight and they function like
 // an appbar. Initially the appbar occupies most of the screen and its section

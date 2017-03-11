@@ -31,6 +31,7 @@ flutter:
    - assets/bN.png
    - assets/OM.png
    - assets/ON.png
+   - assets/pointIcon.png
 
 
   # To add custom fonts to your application, add a fonts section here,

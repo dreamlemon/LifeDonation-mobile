@@ -28,9 +28,74 @@ class Section {
 }
 
 final SectionDetail _home = new SectionDetail(
-  body: new AssetImage(
-    name: 'assets/abM.png'
-  )
+      body:
+      new Column(
+          children: <Widget>[
+            new Row(
+              children: <Widget>[
+                new Container(
+                  child: new Column(
+                    children: <Widget>[
+                      new Image.asset(
+                          'assets/abM.png',
+                          width: 50.0
+                      ),
+                      new Container(
+                        child: new Text('60%',
+                            style: new TextStyle(color: Colors.white, fontSize: 17.0)
+                        ),
+                        margin:  new EdgeInsets.all(10.0)
+                      )
+                      ],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween
+                  ),
+                  margin: new EdgeInsets.all(20.0),
+                ),
+                new Container(
+                    child: new Image.asset(
+                        'assets/abM.png',
+                        width: 60.0
+                    ),
+                    margin: new EdgeInsets.all(20.0),
+                ),
+                new Container(
+                    child: new Image.asset(
+                        'assets/abM.png',
+                        width: 60.0
+                    ),
+                    margin: new EdgeInsets.all(20.0),
+                ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround
+            ),
+            new Row(
+                children: <Widget>[
+                  new Container(
+                      child: new Image.asset(
+                          'assets/abM.png',
+                          width: 60.0
+                      ),
+                      margin: new EdgeInsets.all(20.0),
+                  ),
+                  new Container(
+                      child: new Image.asset(
+                          'assets/abM.png',
+                          width: 60.0
+                      ),
+                      margin: new EdgeInsets.all(20.0),
+                  ),
+                  new Container(
+                      child: new Image.asset(
+                          'assets/abM.png',
+                          width: 60.0
+                      ),
+                      margin: new EdgeInsets.all(20.0),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround
+            ),
+
+  ])
 );
 
 
@@ -66,6 +131,47 @@ final SectionDetail info = new SectionDetail(
 );
 
 
+
+final SectionDetail _profile = new SectionDetail(
+  body: new Container(
+    child: new Row(
+      children: <Widget>[
+        new Text('Puntos por donación: ',
+            style: new TextStyle(color: Colors.white, fontSize: 16.0)
+        ),
+        new DecoratedBox(
+        position: DecorationPosition.foreground,
+        child: new Image.asset(
+            'assets/pointIcon.png',
+            width: 30.0
+        ),
+        decoration: new BoxDecoration(backgroundColor: Colors.black)),
+        new Image.asset(
+            'assets/pointIcon.png',
+            width: 30.0
+        ),
+        new Image.asset(
+            'assets/pointIcon.png',
+            width: 30.0
+        ),
+        new Image.asset(
+            'assets/pointIcon.png',
+            width: 30.0
+        ),
+        new Image.asset(
+            'assets/pointIcon.png',
+            width: 30.0
+        ),
+
+      ]
+
+    ),
+    margin: new EdgeInsets.all(20.0)
+
+  )
+);
+
+
 final List<Section> allSections = <Section>[
   new Section(
     title: 'HOME',
@@ -86,21 +192,22 @@ final List<Section> allSections = <Section>[
 
     ]
   ),
-  const Section(
+  new Section(
     title: 'DONAR AHORA',
       leftColor: CColors.mySin,
       rightColor: CColors.tomato,
     backgroundAsset: 'assets/donateImage.jpeg',
-    details: const <SectionDetail>[
+    details: <SectionDetail>[
 
     ]
   ),
-  const Section(
+  new Section(
     title: 'PERFIL',
     leftColor: Colors.white,
     rightColor: CColors.tomato,
     backgroundAsset: 'assets/profileImage.jpeg',
-    details: const <SectionDetail>[
+    details: <SectionDetail>[
+      _profile
 
     ]
   ),
