@@ -18,18 +18,22 @@ class _RegisterViewState extends State<RegisterView> {
           child: new Stepper(
             steps: [
               new Step(
-                title: new Text("Nombre"),
-                content: new Text("Hosac")
+                title: new Text("¿Como te vamos a llamar?"),
+                content: new Input(),
+
               ),
               new Step(
-                title: new Text("Apellido"),
-                content: new Text("Hosac")
+                title: new Text("¿Donde vives?"),
+                content: new Input()
               ),
               new Step(
-                title: new Text("Tipo de sangre"),
+                title: new Text("¿Conoces tu sangre?"),
                 content: new Text("Hosac")
               )
-            ]
+            ],
+            onStepContinue: () {
+              
+            }
           ),
           margin: new EdgeInsets.all(15.0)
         )
