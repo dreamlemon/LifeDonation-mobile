@@ -181,18 +181,18 @@ class BloodView extends StatelessWidget {
             children: <Widget>[
               new Image.asset(
                   image,
-                  width: 50.0
+                  width: 40.0
               ),
               new Container(
                   child: new Text(porcent,
-                      style: new TextStyle(color: Colors.white, fontSize: 17.0)
+                      style: new TextStyle(color: Colors.white, fontSize: 15.0)
                   ),
                   margin: new EdgeInsets.all(10.0)
               )
             ],
             mainAxisAlignment: MainAxisAlignment.spaceBetween
         ),
-        margin: new EdgeInsets.all(20.0),
+        margin: new EdgeInsets.all(10.0),
     );
   }
 

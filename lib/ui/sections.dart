@@ -44,22 +44,45 @@ class ExpansionItemDetail {
 final SectionDetail _home = new SectionDetail(
       body: new Column(
           children: <Widget>[
-            new Row(
+        new DecoratedBox(
+        decoration: new BoxDecoration(
+            backgroundColor: Colors.white12,),
+             child: new Row(
+                children: <Widget>[
+                  new Container(
+                    child:new Text("PORCENTAJE DE DONACIONES REALIZADAS",
+                      style: new TextStyle(color: Colors.white, fontSize: 15.0),
+                      textAlign: TextAlign.center
+                    ),
+                    margin: new EdgeInsets.all(20.0)
+                  )
+                ]
+            )),
+        new Divider(color: Colors.transparent, height: 5.0),
+        new DecoratedBox(
+            decoration: new BoxDecoration(
+              backgroundColor: Colors.white12,),
+            child: new Row(
               children: <Widget>[
                 new BloodView(image: 'assets/abM.png', porcent: '60%'),
-                new BloodView(image: 'assets/abM.png', porcent: '60%'),
-                new BloodView(image: 'assets/abM.png', porcent: '60%')
+                new BloodView(image: 'assets/abN.png', porcent: '60%'),
+                new BloodView(image: 'assets/aM.png', porcent: '60%'),
+                new BloodView(image: 'assets/ON.png', porcent: '60%')
               ],
               mainAxisAlignment: MainAxisAlignment.spaceAround
-            ),
-            new Row(
+            )),
+        new DecoratedBox(
+            decoration: new BoxDecoration(
+              backgroundColor: Colors.white12,),
+            child: new Row(
                 children: <Widget>[
-                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
-                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
-                  new BloodView(image: 'assets/abM.png', porcent: '60%'),
+                  new BloodView(image: 'assets/aN.png', porcent: '60%'),
+                  new BloodView(image: 'assets/bM.png', porcent: '60%'),
+                  new BloodView(image: 'assets/bN.png', porcent: '60%'),
+                  new BloodView(image: 'assets/OM.png', porcent: '60%')
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround
-            )
+            ))
           ])
 );
 
@@ -135,28 +158,28 @@ String typeOfBlood(String tipoSangre){
   String texto = "";
   switch (tipoSangre){
     case ("AB+"):
-      texto = "Puedes donar a AB+ y eres \n receptor universal. Tu grupo abarca \n el 3% de la población.";
+      texto = "Puedes donar a AB+ y eres \nreceptor universal. Tu grupo abarca \nel 3% de la población.";
       break;
     case ("AB-"):
-      texto = "Puedes donar a AB± eres \n  receptor de A-, B-, AB- y O-. Tu grupo \n abarca el 1% de la población.";
+      texto = "Puedes donar a AB± eres \nreceptor de A-, B-, AB- y O-. Tu grupo \nabarca el 1% de la población.";
       break;
     case ("A+"):
-      texto = "Puedes donar a A+ y AB+ y \n  eres receptor de A± y O±. Tu grupo \n abarca el 37% de la población.";
+      texto = "Puedes donar a A+ y AB+ y \neres receptor de A± y O±. Tu grupo \nabarca el 37% de la población.";
       break;
     case ("A-"):
-      texto = "Puedes donar a A± y AB± y \n  eres receptor de A- y O-. Tu grupo \n abarca el 7% de la población.";
+      texto = "Puedes donar a A± y AB± y \neres receptor de A- y O-. Tu grupo \nabarca el 7% de la población.";
       break;
     case ("B+"):
-      texto = "Puedes donar a B+ y AB+ y \n  eres receptor de B± y O±. Tu grupo \n abarca el 9% de la población.";
+      texto = "Puedes donar a B+ y AB+ y \neres receptor de B± y O±. Tu grupo \nabarca el 9% de la población.";
       break;
     case ("B-"):
-      texto = "Puedes donar a B± y AB± y \n  eres receptor de B- y O-. Tu grupo \n abarca el 1% de la población.";
+      texto = "Puedes donar a B± y AB± y \neres receptor de B- y O-. Tu grupo \nabarca el 1% de la población.";
       break;
     case ("O+"):
-      texto = "Puedes donar a A+, B+, AB+ \n  y O+ y eres receptor de O±. Tu grupo \n abarca el 36% de la población.";
+      texto = "Puedes donar a A+, B+, AB+ \ny O+ y eres receptor de O±. Tu grupo \nabarca el 36% de la población.";
       break;
     case ("O-"):
-      texto = "Felicidades, eres donante \n  universal y receptor de O-. Tu grupo \n abarca el 6% de la población.";
+      texto = "Felicidades, eres donante \nuniversal y receptor de O-. Tu grupo \nabarca el 6% de la población.";
       break;
   }
   return texto;
