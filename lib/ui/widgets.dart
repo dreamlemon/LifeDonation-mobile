@@ -45,7 +45,10 @@ class SectionCard extends StatelessWidget {
 class SectionTitle extends StatelessWidget {
   static const TextStyle sectionTitleStyle = const TextStyle(
     fontFamily: 'Raleway',
-    inherit: false,
+    inherit: false,// This app's contents sta
+// an appbar. Initially th
+// headings are laid out i
+// reduced to _kAppBarMidH
     fontSize: 24.0,
     fontWeight: FontWeight.w500,
     color: Colors.white,
@@ -111,16 +114,55 @@ class SectionIndicator extends StatelessWidget {
 
 // Display a single SectionDetail.
 class SectionDetailView extends StatelessWidget {
+
+  final SectionDetail detail;
+
   SectionDetailView({ Key key, this.detail }) : super(key: key) {
     // assert(detail != null && detail.imageAsset != null);
     // assert((detail.imageAsset ?? detail.title) != null);
   }
 
-  final SectionDetail detail;
-
   @override
   Widget build(BuildContext context) {
     return detail.body;
+  }
+
+}
+
+class ExpansionPanelView extends StatefulWidget {
+
+  ExpansionPanelView({ this.items });
+
+  List<ExpansionItemDetail> items;
+
+  @override
+  ExpansionPanelViewState createState() => new ExpansionPanelViewState(items);
+}
+
+// Display Expansions panel list.
+class ExpansionPanelViewState extends State<ExpansionPanelView> {
+
+  ExpansionPanelViewState(this.itemsc);
+
+  List<ExpansionItemDetail> itemsc;
+
+  @override
+  Widget build(BuildContext context) {
+    return new ExpansionPanelList(
+        expansionCallback: (int index, bool isExpanded) {
+          setState(() {
+            itemsc[index].isExpanded = !isExpanded;
+          });
+        },
+        children: itemsc.map((ExpansionItem item) {
+          return new ExpansionPanel(
+              isExpanded: item.isExpanded,
+              headerBuilder: (BuildContext context, bool isExpanded) {
+                return new Text(item.title);
+              },
+              body: new Text(item.description));
+        }).toList()
+    );
   }
 
 }
