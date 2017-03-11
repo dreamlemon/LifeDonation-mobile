@@ -21,7 +21,6 @@ const double _kAppBarMidHeight = 256.0;
 
 // Initially occupies the same space as the status bar and gets smaller as
 // the primary scrollable scrolls upwards.
-// TODO(hansmuller): it would be worth adding something like this to the framework.
 class _RenderStatusBarPaddingSliver extends RenderSliver {
   _RenderStatusBarPaddingSliver({
     double maxHeight,

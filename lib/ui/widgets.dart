@@ -155,11 +155,15 @@ class ExpansionPanelViewState extends State<ExpansionPanelView> {
         },
         children: itemsc.map((item) {
           return new ExpansionPanel(
-              isExpanded: item.isExpanded,
-              headerBuilder: (BuildContext context, bool isExpanded) {
-                return new Text(item.title);
-              },
-              body: new Text(item.description));
+                  isExpanded: item.isExpanded,
+                  headerBuilder: (BuildContext context, bool isExpanded) {
+                    return new Center(child: new Text(item.title));
+                  },
+                  body: new Container(
+                    child: new Text(item.description),
+                    margin: new EdgeInsets.all(10.0)
+                  )
+          );
         }).toList()
     );
   }
