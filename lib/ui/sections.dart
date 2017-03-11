@@ -71,44 +71,99 @@ final SectionDetail info = new SectionDetail(
     body: new ExpansionPanelView(items: itemsData)
 );
 
+String tipoSangre = "O-";
+
 final SectionDetail _profile = new SectionDetail(
-  body: new Container(
-    child: new Row(
-      children: <Widget>[
-        new Text('Puntos por donación: ',
-            style: new TextStyle(color: Colors.white, fontSize: 16.0)
-        ),
-        new DecoratedBox(
-        position: DecorationPosition.foreground,
-        child: new Image.asset(
-            'assets/pointIcon.png',
-            width: 30.0
-        ),
-        decoration: new BoxDecoration(backgroundColor: Colors.black)),
-        new Image.asset(
-            'assets/pointIcon.png',
-            width: 30.0
-        ),
-        new Image.asset(
-            'assets/pointIcon.png',
-            width: 30.0
-        ),
-        new Image.asset(
-            'assets/pointIcon.png',
-            width: 30.0
-        ),
-        new Image.asset(
-            'assets/pointIcon.png',
-            width: 30.0
-        ),
+  body:new Column(
+      children: <Widget>[new DecoratedBox(
+            decoration: new BoxDecoration(
+                backgroundColor: Colors.white12,),
+                child: new Container(
+                    child:new Row(
+                      children: <Widget>[
+                        new Text('Puntos por donación: ',
+                            style: new TextStyle(color: Colors.white, fontSize: 16.0)
+                        ),
+                        new Image.asset(
+                            'assets/pointIcon.png',
+                            width: 30.0
+                        ),
 
+                        new Image.asset(
+                            'assets/pointIcon.png',
+                            width: 30.0
+                        ),
+                        new Image.asset(
+                            'assets/pointIcon.png',
+                            width: 30.0
+                        ),
+                        new Image.asset(
+                            'assets/pointIcon.png',
+                            width: 30.0
+                        ),
+                        new Image.asset(
+                            'assets/pointIcon.png',
+                            width: 30.0
+                        ),
+
+                      ]
+                    ),
+                  margin: new EdgeInsets.all(20.0)
+                ),
+            ),
+      new Divider(color: Colors.transparent, height: 5.0),
+      new DecoratedBox(
+          decoration: new BoxDecoration(
+              backgroundColor: Colors.white12,),
+          child: new Container(
+              child:new Row(
+                  children: <Widget>[
+                    new Text('Eres '+tipoSangre+ '. '+typeOfBlood(tipoSangre),
+                        style: new TextStyle(color: Colors.white, fontSize: 16.0)
+                    ),
+
+                  ]
+              ),
+              margin: new EdgeInsets.all(20.0)
+          ),
+      ),
       ]
-
-    ),
-    margin: new EdgeInsets.all(20.0)
-
   )
 );
+
+String typeOfBlood(String tipoSangre){
+  String texto = "";
+  switch (tipoSangre){
+    case ("AB+"):
+      texto = "Puedes donar a AB+ y eres \n receptor universal. Tu grupo abarca \n el 3% de la población.";
+      break;
+    case ("AB-"):
+      texto = "Puedes donar a AB± eres \n  receptor de A-, B-, AB- y O-. Tu grupo \n abarca el 1% de la población.";
+      break;
+    case ("A+"):
+      texto = "Puedes donar a A+ y AB+ y \n  eres receptor de A± y O±. Tu grupo \n abarca el 37% de la población.";
+      break;
+    case ("A-"):
+      texto = "Puedes donar a A± y AB± y \n  eres receptor de A- y O-. Tu grupo \n abarca el 7% de la población.";
+      break;
+    case ("B+"):
+      texto = "Puedes donar a B+ y AB+ y \n  eres receptor de B± y O±. Tu grupo \n abarca el 9% de la población.";
+      break;
+    case ("B-"):
+      texto = "Puedes donar a B± y AB± y \n  eres receptor de B- y O-. Tu grupo \n abarca el 1% de la población.";
+      break;
+    case ("O+"):
+      texto = "Puedes donar a A+, B+, AB+ \n  y O+ y eres receptor de O±. Tu grupo \n abarca el 36% de la población.";
+      break;
+    case ("O-"):
+      texto = "Felicidades, eres donante \n  universal y receptor de O-. Tu grupo \n abarca el 6% de la población.";
+      break;
+  }
+  return texto;
+
+
+}
+
 
 
 final List<Section> allSections = <Section>[
