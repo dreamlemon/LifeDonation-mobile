@@ -24,6 +24,14 @@ flutter:
    - assets/homeImage.jpeg
    - assets/infoImage.jpeg
    - assets/profileImage.jpeg
+   - assets/abN.png
+   - assets/aM.png
+   - assets/aN.png
+   - assets/bM.png
+   - assets/bN.png
+   - assets/OM.png
+   - assets/ON.png
+
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

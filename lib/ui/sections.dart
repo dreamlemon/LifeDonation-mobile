@@ -27,10 +27,9 @@ class Section {
   int get hashCode => title.hashCode;
 }
 
-final SectionDetail _graficas = new SectionDetail(
-  body: new DecoratedBox(
-    decoration: new BoxDecoration(backgroundColor: CColors.boxDecoration),
-    child: new Text("Hola")
+final SectionDetail _home = new SectionDetail(
+  body: new AssetImage(
+    name: 'assets/abM.png'
   )
 );
 
@@ -74,7 +73,7 @@ final List<Section> allSections = <Section>[
       rightColor: CColors.mariner,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: <SectionDetail>[
-      _graficas
+      _home
     ]
   ),
   new Section(
