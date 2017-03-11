@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:project_hack_forgood/resources/colors.dart';
+import 'package:project_hack_forgood/resources/resources.dart';
 import 'package:project_hack_forgood/ui/faq.dart';
 import 'package:project_hack_forgood/ui/widgets.dart';
 
