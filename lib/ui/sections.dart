@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:project_hack_forgood/resources/colors.dart';
 import 'package:project_hack_forgood/ui/faq.dart';
+import 'package:project_hack_forgood/ui/widgets.dart';
 
+// MODELS
 class SectionDetail {
   SectionDetail({ this.body });
   final Widget body;
@@ -27,6 +28,17 @@ class Section {
   int get hashCode => title.hashCode;
 }
 
+class ExpansionItemDetail {
+
+  ExpansionItem(this.title, this.description);
+
+  final String title;
+  final String description;
+
+  bool isExpanded = false;
+}
+
+// DATA
 final SectionDetail _home = new SectionDetail(
       body:
       new Column(
@@ -98,36 +110,12 @@ final SectionDetail _home = new SectionDetail(
   ])
 );
 
+List<ExpansionItemDetail> itemsData = <ExpansionItemDetail>[
+  new ExpansionItem("title", "description")
+];
 
 final SectionDetail info = new SectionDetail(
-    body: new SingleChildScrollView(
-        child: new Container(
-            margin: const EdgeInsets.all(24.0),
-            child: new ExpansionPanelList(
-                expansionCallback: (int index, bool isExpanded) {
-
-                },
-                children: <ExpansionPanel> [
-                  new ExpansionPanel(
-                      headerBuilder: (BuildContext context, bool isExpanded) {
-                        return new Text("¿Por qué debemos donar sangre?");
-                      },
-                      body: new Column(
-                          children: <Widget>[
-                      new Container(
-                      margin: const EdgeInsets.only(
-                          left: 24.0,
-                          right: 24.0,
-                          bottom: 24.0
-                      ),
-            child: new Center(
-                child: new Text("Hola")
-            )
-        )])
-                  )]
-            )
-        )
-    )
+    body: new ExpansionPanelView(items: itemsData)
 );
 
 
@@ -179,7 +167,7 @@ final List<Section> allSections = <Section>[
       rightColor: CColors.mariner,
     backgroundAsset: 'assets/homeImage.jpeg',
     details: <SectionDetail>[
-      _home
+
     ]
   ),
   new Section(
@@ -187,9 +175,8 @@ final List<Section> allSections = <Section>[
       leftColor: CColors.tomato,
       rightColor: CColors.mediumPurple,
     backgroundAsset: 'assets/infoImage.jpeg',
-    details:  <SectionDetail>[
+    details: <SectionDetail>[
       info
-
     ]
   ),
   new Section(
